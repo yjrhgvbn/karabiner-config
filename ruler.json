@@ -690,28 +690,6 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "spacebar"
-          },
-          "description": "空格不做映射",
-          "conditions": [
-            {
-              "name": "punctuation_flag",
-              "value": 1,
-              "type": "variable_if"
-            }
-          ],
-          "to": [
-            {
-              "key_code": "semicolon"
-            },
-            {
-              "key_code": "spacebar"
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
             "key_code": "return_or_enter"
           },
           "description": "回车不做映射",
@@ -846,6 +824,28 @@
           "from": {
             "key_code": "t"
           },
+          "description": "百分号 `%`",
+          "conditions": [
+            {
+              "name": "punctuation_flag",
+              "value": 1,
+              "type": "variable_if"
+            }
+          ],
+          "to": [
+            {
+              "key_code": "5",
+              "modifiers": [
+                "left_shift"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "y"
+          },
           "description": "抑扬符号 `^`",
           "conditions": [
             {
@@ -866,7 +866,7 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "y"
+            "key_code": "u"
           },
           "description": "与符号 `&`",
           "conditions": [
@@ -888,7 +888,7 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "u"
+            "key_code": "i"
           },
           "description": "星号 `*`",
           "conditions": [
@@ -910,28 +910,9 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "i"
-          },
-          "description": "减号 `-`",
-          "conditions": [
-            {
-              "name": "punctuation_flag",
-              "value": 1,
-              "type": "variable_if"
-            }
-          ],
-          "to": [
-            {
-              "key_code": "hyphen"
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
             "key_code": "o"
           },
-          "description": "加号 `+`",
+          "description": "重音符号 `",
           "conditions": [
             {
               "name": "punctuation_flag",
@@ -941,10 +922,7 @@
           ],
           "to": [
             {
-              "key_code": "equal_sign",
-              "modifiers": [
-                "left_shift"
-              ]
+              "key_code": "grave_accent_and_tilde"
             }
           ]
         },
@@ -1098,7 +1076,7 @@
           "from": {
             "key_code": "k"
           },
-          "description": "下划线 `_`",
+          "description": "左斜杆 `\\`",
           "conditions": [
             {
               "name": "punctuation_flag",
@@ -1108,10 +1086,7 @@
           ],
           "to": [
             {
-              "key_code": "hyphen",
-              "modifiers": [
-                "left_shift"
-              ]
+              "key_code": "backslash"
             }
           ]
         },
@@ -1119,44 +1094,6 @@
           "type": "basic",
           "from": {
             "key_code": "l"
-          },
-          "description": "重音符号 `",
-          "conditions": [
-            {
-              "name": "punctuation_flag",
-              "value": 1,
-              "type": "variable_if"
-            }
-          ],
-          "to": [
-            {
-              "key_code": "grave_accent_and_tilde"
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "v"
-          },
-          "description": "斜杆 `//`",
-          "conditions": [
-            {
-              "name": "punctuation_flag",
-              "value": 1,
-              "type": "variable_if"
-            }
-          ],
-          "to": [
-            {
-              "key_code": "slash"
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "b"
           },
           "description": "竖杠 `|`",
           "conditions": [
@@ -1178,7 +1115,26 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "m"
+            "key_code": "c"
+          },
+          "description": "斜杆 `//`",
+          "conditions": [
+            {
+              "name": "punctuation_flag",
+              "value": 1,
+              "type": "variable_if"
+            }
+          ],
+          "to": [
+            {
+              "key_code": "slash"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "v"
           },
           "description": "问号 `?`",
           "conditions": [
@@ -1191,6 +1147,69 @@
           "to": [
             {
               "key_code": "slash",
+              "modifiers": [
+                "left_shift"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "b"
+          },
+          "description": "减号 `-`",
+          "conditions": [
+            {
+              "name": "punctuation_flag",
+              "value": 1,
+              "type": "variable_if"
+            }
+          ],
+          "to": [
+            {
+              "key_code": "hyphen"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "n"
+          },
+          "description": "加号 `+`",
+          "conditions": [
+            {
+              "name": "punctuation_flag",
+              "value": 1,
+              "type": "variable_if"
+            }
+          ],
+          "to": [
+            {
+              "key_code": "equal_sign",
+              "modifiers": [
+                "left_shift"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "m"
+          },
+          "description": "下划线 `_`",
+          "conditions": [
+            {
+              "name": "punctuation_flag",
+              "value": 1,
+              "type": "variable_if"
+            }
+          ],
+          "to": [
+            {
+              "key_code": "hyphen",
               "modifiers": [
                 "left_shift"
               ]
